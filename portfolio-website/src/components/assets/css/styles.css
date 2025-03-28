@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Header Styles */
+#header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+#header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+#header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#header .navbar ul li {
+    margin-left: 20px;
+}
+
+#header .navbar ul li a {
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+#header .navbar ul li a:hover,
+#header .navbar ul li a.active {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero .overlay-itro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .hero-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#hero .hero-title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#hero .hero-subtitle {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about-mf {
+    padding: 60px 0;
+}
+
+.about-mf .about-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-mf .about-info {
+    margin-top: 20px;
+}
+
+.about-mf .title-s {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.about-mf .skill-mf .progress {
+    height: 10px;
+    margin-bottom: 10px;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.about-mf .skill-mf .progress-bar {
+    background: #007bff;
+}
+
+/* Services Section */
+.services-mf {
+    padding: 60px 0;
+}
+
+.services-mf .service-box {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.services-mf .service-ico {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.services-mf .s-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.services-mf .s-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Portfolio Section */
+.portfolio-mf {
+    padding: 60px 0;
+}
+
+.portfolio-mf .work-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.portfolio-mf .work-img img {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.portfolio-mf .work-box:hover .work-img img {
+    transform: scale(1.1);
+}
+
+.portfolio-mf .work-content {
+    padding: 20px;
+    background: #fff;
+}
+
+.portfolio-mf .w-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-mf .w-more {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.testimonials .testimonial-box {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonials .author-test img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonials .author-test .author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.testimonials .content-test .description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-mf {
+    padding: 60px 0;
+}
+
+.contact-mf .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-mf .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+.contact-mf .button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.contact-mf .button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #007bff;
+}
+
+footer a:hover {
+    color: #0056b3;
+}

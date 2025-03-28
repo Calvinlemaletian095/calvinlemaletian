@@ -1,0 +1,22 @@
+/* Bootstrap Icons CSS */
+
+/* Example of using a Bootstrap icon */
+.bi {
+    display: inline-block;
+    font-family: "Bootstrap Icons";
+    font-style: normal;
+    font-weight: normal;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bi-alarm {
+    content: "\f101";
+}
+
+.bi-calendar {
+    content: "\f133";
+}
+
+/* Add more icon classes as needed */

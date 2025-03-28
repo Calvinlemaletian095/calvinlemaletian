@@ -1,0 +1,825 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    color: white;
+    background: #081b29;
+    height: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 8%;
+    background: rgba(0, 0, 0, 0.495);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: top 0.4s ease-in-out; /* Smooth transition */
+}
+
+.hidden {
+    top: -100px; /* Moves the header out of view */
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    animation: slideRight 1S ease forwards;
+    animation-delay: 1s;
+    margin-right: 10px;
+}
+.logo span{
+    color: #ff004f;
+    font-size: 20px;
+}
+.logo i{
+    color: #0ef;
+    font-size: 50px;
+    word-spacing: 40px;
+    margin-right: 30px;
+}
+.logo i b{
+    font-size: 20px;
+    padding-left: 220px;
+}
+.navbar {
+    display: grid;
+    grid-auto-flow: column; /* Places items in a row */
+    gap: 20px; /* Adds spacing between links */
+    justify-content: center; /* Centers the navbar */
+    padding: 10px 0;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+    margin-left: 10px;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--1));
+}
+.navbar a .btn .btn2 {
+padding-right: 300px;
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+/* Hero Section */
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Overlay Effect */
+.overlay-itro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* About Section */
+/* About Section */
+#about {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Light grey background */
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Container */
+.about-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Left Section: Image and Details */
+.about-left {
+    width: 40%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* Profile Image - Passport Size */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.712); /* 0.2 makes it slightly transparent */
+    padding: 10px; /* Adds some spacing */
+    border-radius: 10px; /* Optional: soft edges */
+}
+
+
+.about-img img {
+    width: 150px; /* Adjust for passport-size image */
+    height: 200px;
+    border-radius: 10px; /* Slightly rounded corners */
+    object-fit: cover; /* Ensures the image stays well-fitted */
+}
+
+.about-info {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    color: #444; /* Light gray for a slightly faded look */
+    font-size: 16px;
+}
+
+.title-s {
+    font-weight: 700; /* Slight boldness for labels */
+    color: #222;
+    font-size: large;
+    font-family: serif;
+}
+.title-s span {
+color: black;
+font-weight: 700;
+}
+/* Skills Section */
+.skill-mf {
+    margin-top: 20px;
+}
+.skill-mf .title-s {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.skill-mf span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+}
+.skill-mf .progress {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill-mf .progress-bar {
+    background: #007bff; /* Blue progress bar */
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+/* Right Section: About Me */
+.about-right {
+    width: 60%;
+    padding-left: 20px;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    color: #666;
+    font-size: large;
+    }
+
+.about-right .title-left {
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.about-right p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+.about-right h5 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #081b29;
+    text-align: left;
+    position: relative;
+}
+
+.about-right h5::after {
+    content: "";
+    display: block;
+    width: 15%;  /* Adjust width of the underline */
+    height: 10px;
+    background: red; /* Change underline color */
+    margin-top: 5px; /* Space between text & underline */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-left, .about-right {
+        width: 100%;
+        padding: 0;
+    }
+    .about-img img {
+        width: 100px;
+        height: 130px;
+    }
+}
+
+/* Services Section */
+/* Service Boxes */
+/* Service Section */
+.services-mf .row {
+    display: flex; /* Enables flexbox */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers the service boxes */
+    gap: 20px; /* Adds space between them */
+}
+
+/* Service Boxes */
+.service-box {
+    display: flex;
+    flex-direction: column; /* Keeps text below icon */
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px; /* Adjusted for better fit */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.service-ico {
+    margin-bottom: 15px;
+}
+
+.ico-circlee {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 115, 255, 0.947); /* Transparent blue */
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff; /* Icon color */
+}
+
+.s-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #081b29;
+}
+
+.s-description {
+    font-size: 16px;
+    color: #555;
+}
+.services-mfk h3 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+}
+
+.services-mfk h3::after {
+    content: "";
+    display: block;
+    width: 7%;  /* Adjust width of the line */
+    height: 10px;
+    background: red; /* Change underline color */
+    margin: 8px auto 0; /* Space between text & underline */
+}
+
+
+.service-box:hover {
+    transform: translateY(-15px);
+}
+
+
+/* Ensure the entire counter section takes up space */
+.section-counter {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    height: 150%;
+}
+
+.overlay-mfn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 60, 180, 0.692); /* Reduce opacity for better readability */
+}
+
+.counter-box {
+    position: relative;
+    z-index: 2; /* Ensure text stays above the overlay */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.ico-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.037); /* Light transparent background */
+    border: 4px solid white;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto 15px;
+}
+
+.counter-num p {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.868); /* Add slight shadow for contrast */
+}
+
+.counter-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Improve readability */
+}
+
+
+/* Center the Portfolio Title */
+.title-box h4{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+}
+
+.title-box h4::after {
+    content: "";
+    display: block;
+    width: 22%;  /* Adjust width of the line */
+    height: 10px;
+    background: red; /* Change underline color */
+    margin: 8px auto 0; /* Space between text & underline */
+}
+    .title-box p {
+        padding-left: 10px;
+    }
+
+/* Portfolio Grid */
+.row {
+    display: flex;
+    justify-content: center; /* Centers items */
+    flex-wrap: wrap; /* Makes it responsive */
+    gap: 30px; /* Adds spacing between items */
+}
+
+/* Portfolio Work Box */
+.work-box {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, box-shadow 0,6s ease-in-out;
+    width: 100%; /* Full width */
+    max-width: 350px; /* Limits width */
+}
+
+/* Hover Effect */
+.work-box:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio Image */
+.work-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Work Content */
+.work-content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Title & Category */
+.w-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black; /* White text */
+}
+
+.w-more {
+    font-size: 14px;
+    color: #0514ed;
+}
+
+/* Like Icon */
+.w-like a {
+    color: #007bff;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.w-like a:hover {
+    color: #ffcc00;
+}
+
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials {
+    position: relative;
+    padding: 60px 0;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Blue Transparent Background */
+.testimonials .overlay-mfj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 60, 150, 0.7); /* Blue transparent overlay */
+}
+
+/* Testimonial Box */
+.testimonial-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 255, 0.3); /* Light blue transparent background */
+    padding: 30px;
+    border-radius: 80px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Testimonial Image */
+.author-test img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+/* Testimonial Author Name */
+.author-test .author {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Testimonial Content */
+.content-test p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    font-style: italic;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffcc00 !important;
+    opacity: 1;
+}
+/* White space separator between sections */
+.section-separator {
+    height: 80px; /* Adjust height for spacing */
+    background-color: white; /* White background */
+}
+
+/* Ensure Testimonials & Contact sections have proper padding */
+.testimonials {
+    padding-bottom: 40px; /* Space below testimonials */
+}
+
+#contact {
+    padding-top: 40px; /* Space above contact */
+}
+
+/* Contact Section Background */
+/* Contact Section */
+/* Contact Section - Background Styling */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh; /* Full page height */
+    background: url('assets/img/jh.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+/* Transparent Blue Overlay */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 116, 218, 0.6); /* Transparent blue overlay */
+}
+
+/* Centered Container */
+.containerr {
+    position: relative;
+    max-width: 800px; /* Medium-sized container */
+    width: 90%;
+    background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Form Styling */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    background: #0a74da;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #fa031c;
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #0a74da;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(10, 116, 218, 0.1); /* Light blue transparent background */
+    color: #0a74da;
+    font-size: 28px;
+    margin-right: 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    background: #0a74da;
+    color: #fff; /* White on hover */
+}
+
+/* Footer */
+/* Footer Styling */
+footer {
+    background: rgba(6, 134, 239, 0.95); /* Transparent blue background */
+    color: rgb(252, 248, 252); /* Text color */
+    padding: 30px 0; /* Space inside footer */
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Copyright and credits */
+.copyright-box {
+    padding: 10px;
+}
+
+.copyright-box a {
+    color: white; /* Keep links visible */
+    text-decoration: none;
+}
+
+.copyright-box a:hover {
+    text-decoration: underline;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(0, 0, 255, 0.7); /* More solid blue for visibility */
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background: rgba(0, 0, 255, 1); /* Fully solid blue on hover */
+}
+
+@media only screen and(max-width:600px){
+    
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
